@@ -1,21 +1,87 @@
 header {
     display: flex;
+    background-color: rgb(12, 3, 67);
     justify-content: space-between;
-    background-color: aquamarine;
+    padding: 10px;
+    position: relative;
+    /* flex-wrap: wrap; */
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 60px;
     font-family: Glook;
+    color: white;
+    padding-left: 25px;
 }
 
-.links {
+nav {
     display: flex;
-    
+    /* flex: 0 0 auto;  */
 }
 
 nav a {
-    margin: 10px; 
     font-size: 30px;
+    color: white;
+    margin: 10px; 
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    transition: border-bottom .15s;
+}
 
+nav a:hover {
+    cursor: pointer;
+    border-bottom: 6px solid white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#hero {
+    position: relative;
+    background-image: url(../images/hero.jpg);
+    /* background-size: cover;  */
+    padding: 75px;
+    border: 3px solid black; 
+}
+
+h2 {
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+@media screen and (max-width: 850px) {
+
+    nav {
+      flex-direction: column;
+    }
+    h2 {
+        font-size: 30px;
+        position: static;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    h1, h2, h3 {
+    text-align: center;
+    }
+    header {
+      flex-direction: column;
+    }
+    nav {
+        color: white;
+        border-top: 2px solid white; 
+        padding-top: 5px;
+    }
 }
