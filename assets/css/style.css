@@ -55,22 +55,56 @@ h2 {
     right: 50px;
 }
 
+.section-box {
+    display: flex;
+    position: relative;
+    padding: 20px;
+}
+
+.section-title-box {
+    flex: 1 0 25%;
+    border-right: 3px solid rgb(8, 8, 92);
+    position: relative;
+}
+
+.section-content {
+    padding: 20px;
+}
+
+.section-content p {
+    padding-bottom: 15px; 
+}
+
 h3 {
     font-size: 50px;
+    position: absolute;
+    right: 20px;
+    top: 20px; 
+
 }
 
 @media screen and (max-width: 850px) {
 
-    h1 {
+     h1 {
         align-self: center;
     }
     nav {
       flex-direction: column;
     }
+    h2, h3 {
+        position: static;
+    }
     h2 {
         font-size: 30px;
         position: static;
         text-align: center;
+    }
+    .section-box {
+        flex-direction: column;
+    }
+    .section-title-box {
+        border-right: 0px; 
+        border-bottom: 3px solid black;
     }
 }
 
@@ -98,5 +132,8 @@ h3 {
        font-size: 20px;
        padding-left: 6px;
        padding-right: 10px;
+    }
+    .section-content, .section-box {
+        padding: 10px 13px 0px 13px;
     }
 }
