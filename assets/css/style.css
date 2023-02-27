@@ -3,8 +3,6 @@ header {
     background-color: rgb(12, 3, 67);
     justify-content: space-between;
     padding: 10px;
-    position: relative;
-    /* flex-wrap: wrap; */
 }
 
 h1 {
@@ -15,8 +13,7 @@ h1 {
 }
 
 nav {
-    display: flex;
-    /* flex: 0 0 auto;  */
+display: flex;
 }
 
 nav a {
@@ -36,13 +33,11 @@ nav a:hover {
 main {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
 #hero {
     position: relative;
     background-image: url(../images/hero.jpg);
-    /* background-size: cover;  */
     padding: 75px;
     border: 3px solid black; 
 }
@@ -57,34 +52,48 @@ h2 {
 
 .section-box {
     display: flex;
-    position: relative;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
 .section-title-box {
-    flex: 1 0 25%;
+    flex: 1;
     border-right: 3px solid rgb(8, 8, 92);
-    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    padding-right: 20px;
 }
 
 .section-content {
     padding: 20px;
+    flex: 4;
 }
 
 .section-content p {
     padding-bottom: 15px; 
+    font-size: 20px;
 }
 
 h3 {
     font-size: 50px;
-    position: absolute;
-    right: 20px;
-    top: 20px; 
-
 }
 
-@media screen and (max-width: 850px) {
+.work-img-container {
+    display: flex; 
+}
 
+.work-img-container div {
+    flex: 1;
+}
+
+.work-img {
+    height: 25%;
+    width: 25%;
+}
+
+
+@media screen and (max-width: 860px) {
      h1 {
         align-self: center;
     }
@@ -105,11 +114,11 @@ h3 {
     .section-title-box {
         border-right: 0px; 
         border-bottom: 3px solid black;
+        justify-content: start;
     }
 }
 
-@media screen and (max-width: 500px) {
-
+@media screen and (max-width: 520px) {
     h1, h2, h3 {
     text-align: center;
     padding: 0;
