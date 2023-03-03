@@ -1,3 +1,5 @@
+
+
 header {
     display: flex;
     background-color: rgb(12, 3, 67);
@@ -40,6 +42,7 @@ main {
     background-image: url(../images/hero.jpg);
     padding: 75px;
     border: 3px solid black; 
+    background-size: 100%;
 }
 
 h2 {
@@ -61,7 +64,7 @@ h2 {
     border-right: 3px solid rgb(8, 8, 92);
     display: flex;
     align-items: start;
-    justify-content: end;
+    justify-content: center;
     padding-right: 20px;
 }
 
@@ -81,17 +84,44 @@ h3 {
 
 .work-img-container {
     display: flex; 
+    flex-wrap: wrap;
+    max-width: 80%;
+    align-content: center;
 }
 
-.work-img-container div {
-    flex: 1;
+.surf-report {
+    flex-basis: 100%;
+    min-height: 450px;
+    margin: .5rem;
+    position: relative;
 }
 
-.work-img {
-    height: 25%;
-    width: 25%;
+.small-work {
+    flex-basis: calc(50% - 1rem);
+    margin: .5rem;
+    min-height: 200px;
 }
 
+.work-img-container div img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-text {
+    background-color: rgb(67, 7, 67);
+    position: relative;
+    bottom: 100px; 
+    
+}
+
+.img-work-title {
+    font-size: 46px;
+    color: white;
+}
+
+.img-work-langs {
+    color: white;
+}
 
 @media screen and (max-width: 860px) {
      h1 {
@@ -102,10 +132,10 @@ h3 {
     }
     h2, h3 {
         position: static;
+        text-align: center;
     }
     h2 {
         font-size: 30px;
-        position: static;
         text-align: center;
     }
     .section-box {
@@ -114,12 +144,20 @@ h3 {
     .section-title-box {
         border-right: 0px; 
         border-bottom: 3px solid black;
-        justify-content: start;
+    }
+    .work-img-container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .surf-report {
+        flex-basis: 1;
+        min-height: 0;
     }
 }
 
 @media screen and (max-width: 520px) {
     h1, h2, h3 {
+    position: static;
     text-align: center;
     padding: 0;
     }
