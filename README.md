@@ -12,3 +12,4 @@ Pastel Puzzels image from Pixabay, [which can be found here](https://pixabay.com
 
 Run Buddy image from Pixabay, [which can be found here](https://pixabay.com/photos/optical-ilusion-illusion-3046735/), using the Pixabay Licencse.
 
+Resume Samples PDF [retrieved from this site](https://msnlabs.com/img/resume-sample.pdf). 
