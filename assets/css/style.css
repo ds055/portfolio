@@ -1,4 +1,6 @@
-
+* {
+    --dark-purple: rgb(67, 7, 67);
+}
 
 header {
     display: flex;
@@ -88,7 +90,7 @@ h2 {
     border-right: 3px solid rgb(8, 8, 92);
     display: flex;
     align-items: start;
-    justify-content: center;
+    justify-content: end;
     padding-right: 20px;
 }
 
@@ -120,10 +122,8 @@ h3 {
 .surf-report {
     display: flex;
     flex-basis: 100%;
-    /* min-height: 450px; */
     margin: .5rem;
     position: relative;
-    /* New stuff */
     max-height: 400px;
 }
 
@@ -154,7 +154,7 @@ h3 {
 .img-text {
     display: flex;
     flex-direction: column;
-    background-color: rgb(67, 7, 67);
+    background-color: var(--dark-purple);
     position: absolute;;
     bottom: 30px; 
     padding: 10px;
@@ -173,6 +173,24 @@ h4 {
 
 .img-work-langs {
     color: white;
+}
+
+.contact-me-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-me-box a {
+    font-size: 30px;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--dark-purple);
+    transition: border-bottom .15s linear, padding-bottom .15s linear;
+}
+
+.contact-me-box a:hover {
+    border-bottom: 5px solid var(--dark-purple);
+    padding-bottom: 2px;
 }
 
 @media screen and (max-width: 980px) {
@@ -199,6 +217,7 @@ h4 {
     .section-title-box {
         border-right: 0px; 
         border-bottom: 3px solid black;
+        justify-content: center;
     }
     .work-img-container {
         flex-direction: column;
@@ -208,6 +227,17 @@ h4 {
         flex-basis: 1;
         min-height: 0;
     }
+
+    .contact-me-box {
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        padding-bottom: 50px;
+    }
+
+    .contact-me-box a {
+        padding-top: 15px;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -216,6 +246,7 @@ h4 {
     text-align: center;
     padding: 0;
     }
+
     h1 {
         font-size: 45px;
         padding-right: 10px;
@@ -224,8 +255,6 @@ h4 {
     .name-avatar-box {
         justify-content: center;
     }
-
-
     
     #hero {
         background-size:cover;
@@ -233,6 +262,10 @@ h4 {
     header {
       flex-direction: column;
     }
+
+    .avatar {
+    }
+
     nav {
         color: white;
         border-top: 2px solid white; 
@@ -249,7 +282,13 @@ h4 {
        padding-left: 6px;
        padding-right: 10px;
     }
+
     .section-content, .section-box {
         padding: 10px 13px 0px 13px;
     }
+
+    .contact-me-box {
+        padding-bottom: 50px;
+    }
+
 }
