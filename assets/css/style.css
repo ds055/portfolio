@@ -98,6 +98,7 @@ h3 {
 }
 
 .small-work {
+    position: relative;
     flex-basis: calc(50% - 1rem);
     margin: .5rem;
     min-height: 200px;
@@ -109,13 +110,22 @@ h3 {
 }
 
 .img-text {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(67, 7, 67);
-    position: absolute;
+    position: absolute;;
     bottom: 30px; 
+    padding: 10px;
 }
 
-.img-work-title {
-    font-size: 46px;
+.img-text p {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+h4 {
+    font-size: 40px;
     color: white;
 }
 
@@ -137,6 +147,9 @@ h3 {
     h2 {
         font-size: 30px;
         text-align: center;
+    }
+    h4 {
+        font-size: 24px;
     }
     .section-box {
         flex-direction: column;
@@ -160,6 +173,9 @@ h3 {
     position: static;
     text-align: center;
     padding: 0;
+    }
+    #hero {
+        background-size:cover;
     }
     header {
       flex-direction: column;
