@@ -177,10 +177,13 @@ h4 {
 
 .contact-me-box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    align-content: center;
 }
 
 .contact-me-box a {
+    color: var(--dark-purple);
     font-size: 30px;
     text-decoration: none;
     padding-bottom: 5px;
@@ -231,7 +234,7 @@ h4 {
     .contact-me-box {
         flex-direction: column;
         align-items: center;
-        justify-items: center;
+        justify-content: center;
         padding-bottom: 50px;
     }
 
@@ -244,7 +247,7 @@ h4 {
     h1, h2, h3 {
     position: static;
     text-align: center;
-    padding: 0;
+    padding: 0px;
     }
 
     h1 {
@@ -252,8 +255,12 @@ h4 {
         padding-right: 10px;
     }
 
+    .section-title-box {
+        padding: 0px;
+    }
+
     .name-avatar-box {
-        justify-content: center;
+        justify-content: space-evenly
     }
     
     #hero {
@@ -261,9 +268,6 @@ h4 {
     }
     header {
       flex-direction: column;
-    }
-
-    .avatar {
     }
 
     nav {
@@ -288,6 +292,11 @@ h4 {
     }
 
     .contact-me-box {
+        flex-basis: 100%;
         padding-bottom: 50px;
+    }
+
+    .contact-me-box a {
+        font-size: 25px;
     }
 }
