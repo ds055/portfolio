@@ -1,23 +1,25 @@
 * {
+    /* Dark purple used in Header Background and Link Title's Background */
     --dark-purple: rgb(67, 7, 67);
 }
 
+/* Header: properties */
 header {
     display: flex;
-    position: relative;
     background-color: rgb(12, 3, 67);
     justify-content: space-between;
     padding: 10px;
 }
 
+/* Name/Title and Avatar Box: sets alignment */
 .name-avatar-box {
     display: flex;
     align-items: center;
     justify-content: start;
 }
 
+/* Title/Name: sets size and spacing */
 h1 {
-    display: inline-block;
     font-size: 60px;
     font-family: Glook;
     color: white;
@@ -25,11 +27,13 @@ h1 {
     padding-left: 10px;
 }
 
+/* Box for avatar: prevents shrinking and sets size */
 .avatar {
     display: flex;
     flex: 0 0 100px;
 }
 
+/* Avatar image: rounds edges and sets border */
 .avatar img { 
     width: 100%;
     height: 100%;
@@ -37,13 +41,15 @@ h1 {
     border: 5px solid white;
 }
 
+/* Nav Box: sets alignment and prevents shrinking/wrapping of text when viewport adjusted */
 nav {
-display: inline-flex;
-align-items: center;
-justify-content: end;
-flex: 1 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: end;
+    flex: 1 0 auto;
 }
 
+/* Nav Links: removes standard link properties, creates animation with bottom border */
 nav a {
     font-size: 30px;
     color: white;
@@ -53,16 +59,19 @@ nav a {
     transition: border-bottom .15s;
 }
 
+/* Nav Links: changes cursor and widens border on hover */
 nav a:hover {
     cursor: pointer;
     border-bottom: 6px solid white;
 }
 
+/* Main Box: set to flex and column direction */
 main {
     display: flex;
     flex-direction: column;
 }
 
+/* Hero Banner: Sets background and stretches to fill, relative position to adjust subtitle */
 #hero {
     position: relative;
     background-image: url(../images/hero.jpg);
@@ -71,6 +80,7 @@ main {
     background-size: 100%;
 }
 
+/* Subtitle: sets position to bottom-right when viewport full */
 h2 {
     font-size: 40px;
     color: white;
@@ -79,12 +89,14 @@ h2 {
     right: 50px;
 }
 
+/* Section Boxes: Sets all section boxes to flex */
 .section-box {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
 }
 
+/* Section Title Boxes: sets basic format */
 .section-title-box {
     flex: 1;
     border-right: 3px solid rgb(8, 8, 92);
@@ -94,20 +106,24 @@ h2 {
     padding-right: 20px;
 }
 
+/* Section Content Boxes: Sets flex size (80%) and padding */
 .section-content {
     padding: 20px;
     flex: 4;
 }
 
+/* Article Ps */
 .section-content p {
     padding-bottom: 15px; 
     font-size: 20px;
 }
 
+/* Section Titles */
 h3 {
     font-size: 50px;
 }
 
+/* Work Img Container: main box settings */
 .work-img-container {
     display: flex; 
     flex-wrap: wrap;
@@ -115,10 +131,12 @@ h3 {
     align-content: center;
 }
 
-.work-img-container a {
-    display: flex;
+/* Work Cards */
+.work-card {
+    border: 5px solid purple;
 }
 
+/* Big Card: made relative for Card Text Box positioning */
 .surf-report {
     display: flex;
     flex-basis: 100%;
@@ -127,10 +145,7 @@ h3 {
     max-height: 400px;
 }
 
-.work-card {
-    border: 5px solid purple;
-}
-
+/* Smaller Cards: made relative for Card Text Box positioning, flex basis allows for border */
 .small-work {
     display: flex;
     position: relative;
@@ -139,6 +154,12 @@ h3 {
     max-height: 200px;
 }
 
+/* Card Img Links: Container for pictures--pictures overflow without */
+.work-img-container a {
+    display: flex;
+}
+
+/* Card Img: base settings, covers container, make transparent */
 .work-img {
     object-fit: cover;
     width: 100%;
@@ -146,11 +167,13 @@ h3 {
     transition: opacity .25s linear;
 }
 
+/* Card Img: transparency removed when hovering  */
 .work-img:hover {
     opacity: 100%;
     cursor: pointer;
 }
 
+/* Card Text Box: absolute to position to bottom left */
 .img-text {
     display: flex;
     flex-direction: column;
@@ -160,21 +183,25 @@ h3 {
     padding: 10px;
 }
 
+/* Card Text: language Used for Project */
 .img-text p {
     text-align: center;
     margin: 0px;
     padding: 0px;
 }
 
+/* Card Titles Font */
 h4 {
     font-size: 40px;
     color: white;
 }
 
+/* Card Text Font */
 .img-work-langs {
     color: white;
 }
 
+/* Contact Me Section Container: spaces out links */
 .contact-me-box {
     display: flex;
     flex-wrap: wrap;
@@ -182,6 +209,7 @@ h4 {
     align-content: center;
 }
 
+/* Contact Me Links: set border for animation */
 .contact-me-box a {
     color: var(--dark-purple);
     font-size: 30px;
@@ -191,46 +219,59 @@ h4 {
     transition: border-bottom .15s linear, padding-bottom .15s linear;
 }
 
+/* Contact Me Links Animation: removes padding to avoid container shake */
 .contact-me-box a:hover {
     border-bottom: 5px solid var(--dark-purple);
     padding-bottom: 2px;
 }
 
+/* Viewport Changes */
 @media screen and (max-width: 980px) {
-     h1 {
+    /* Site Title: move to center */
+    h1 {
         align-self: center;
     }
+
+    /* Nav Bar: change to column from row */
     nav {
-      flex-direction: column;
+        flex-direction: column;
     }
-    h2, h3 {
-        position: static;
-        text-align: center;
-    }
-    h2 {
-        font-size: 30px;
-        text-align: center;
-    }
-    h4 {
-        font-size: 24px;
-    }
+
+    /* Section Boxes: switch to column */
     .section-box {
         flex-direction: column;
     }
+
+    /* Section Titles: Center titles */
     .section-title-box {
         border-right: 0px; 
         border-bottom: 3px solid black;
         justify-content: center;
     }
+
+    /* Subtitle and Section Headings */
+    h2, h3 {
+        position: static;
+    }
+
+    /* Subtitle */
+    h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    /* Card Titles */
+    h4 {
+        font-size: 24px;
+    }
+
+    /* Work Cards: place cards in a column to fill up screen */
     .work-img-container {
         flex-direction: column;
         max-width: 100%;
     }
-    .surf-report {
-        flex-basis: 1;
-        min-height: 0;
-    }
 
+    /* Contact-Me Container: switch links to column and center */
     .contact-me-box {
         flex-direction: column;
         align-items: center;
@@ -238,64 +279,73 @@ h4 {
         padding-bottom: 50px;
     }
 
+    /* Contact-Me Links: add space between links */
     .contact-me-box a {
         padding-top: 15px;
     }
 }
 
+/* Viewport (Phone sizes) */
 @media screen and (max-width: 640px) {
-    h1, h2, h3 {
-    position: static;
-    text-align: center;
-    padding: 0px;
+
+    /* Header: flip to column */
+    header {
+        flex-direction: column;
     }
 
+    /* Site Title: put padding between title and Avatar */
     h1 {
         font-size: 45px;
         padding-right: 10px;
     }
 
-    .section-title-box {
-        padding: 0px;
-    }
-
+    /* Title/Avatar Box: space apart in header */
     .name-avatar-box {
         justify-content: space-evenly
     }
     
+    /* Nav Bar: align to center; add border to delineate from header*/
+    nav {
+            border-top: 2px solid white; 
+            padding-top: 5px;
+            text-align: center;
+        }
+    
+    /* Nav Links: remove starting border */
+    nav a{
+            border: 0;
+        }
+
+    /* Nav Links: add dots on either side */
+    nav a::after, nav a::before{
+        content: ' \2022';   
+        font-size: 20px;
+        padding-left: 6px;
+        padding-right: 10px;
+        }
+    
+    /* Hero Banner: resize image to cover container */
     #hero {
         background-size:cover;
     }
-    header {
-      flex-direction: column;
+
+    /* Section Title Boxes: slight text adjustment */
+    .section-title-box {
+        padding: 0px;
     }
 
-    nav {
-        color: white;
-        border-top: 2px solid white; 
-        padding-top: 5px;
-        text-align: center;
-    }
-    nav a{
-        text-decoration: none;
-        border: 0;
-    }
-    nav a::after, nav a::before{
-       content: ' \2022';   
-       font-size: 20px;
-       padding-left: 6px;
-       padding-right: 10px;
-    }
-
+    /* Section Containers */
     .section-content, .section-box {
         padding: 10px 13px 0px 13px;
     }
 
+    /* Contact-Me Container: adjusts column alignment for phone view */
     .contact-me-box {
         flex-basis: 100%;
         padding-bottom: 50px;
     }
 
+    /* Contact-Me Links */
     .contact-me-box a {
         font-size: 25px;
     }
