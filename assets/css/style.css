@@ -89,13 +89,6 @@ h2 {
     right: 50px;
 }
 
-/* Section Boxes: Sets all section boxes to flex */
-.section-box {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
 /* Section Title Boxes: sets basic format */
 .section-title-box {
     flex: 1;
@@ -104,6 +97,13 @@ h2 {
     align-items: start;
     justify-content: end;
     padding-right: 20px;
+}
+
+/* Section Boxes: Sets all section boxes to flex */
+.section-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 /* Section Content Boxes: Sets flex size (80%) and padding */
@@ -127,8 +127,6 @@ h3 {
 .work-img-container {
     display: flex; 
     flex-wrap: wrap;
-    max-width: 80%;
-    align-content: center;
 }
 
 /* Work Cards */
@@ -183,7 +181,7 @@ h3 {
     padding: 10px;
 }
 
-/* Card Text: language Used for Project */
+/* Card Text: language Used for Project; margin/padding changes help alignment*/
 .img-text p {
     text-align: center;
     margin: 0px;
@@ -201,7 +199,7 @@ h4 {
     color: white;
 }
 
-/* Contact Me Section Container: spaces out links */
+/* Contact Me Section Container: spaces out links; wrap prevents odd changes with border-bottom*/
 .contact-me-box {
     display: flex;
     flex-wrap: wrap;
@@ -227,10 +225,6 @@ h4 {
 
 /* Viewport Changes */
 @media screen and (max-width: 980px) {
-    /* Site Title: move to center */
-    h1 {
-        align-self: center;
-    }
 
     /* Nav Bar: change to column from row */
     nav {
@@ -242,7 +236,7 @@ h4 {
         flex-direction: column;
     }
 
-    /* Section Titles: Center titles */
+    /* Section Titles: Center titles, turn off border-right */
     .section-title-box {
         border-right: 0px; 
         border-bottom: 3px solid black;
@@ -308,7 +302,6 @@ h4 {
     nav {
             border-top: 2px solid white; 
             padding-top: 5px;
-            text-align: center;
         }
     
     /* Nav Links: remove starting border */
@@ -341,7 +334,6 @@ h4 {
 
     /* Contact-Me Container: adjusts column alignment for phone view */
     .contact-me-box {
-        flex-basis: 100%;
         padding-bottom: 50px;
     }
 
